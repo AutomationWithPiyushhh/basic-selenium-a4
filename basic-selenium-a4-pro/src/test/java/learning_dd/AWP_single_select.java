@@ -28,7 +28,6 @@ public class AWP_single_select {
 		countrySel.selectByIndex(4);
 
 //		List<WebElement> countries = countrySel.getOptions();
-//		
 //		for(WebElement i : countries) {
 //			String text = i.getText();
 //			System.out.println(text);
