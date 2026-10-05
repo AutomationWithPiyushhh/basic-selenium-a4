@@ -38,7 +38,15 @@ public class AWP_Mouse_actions {
 		
 		act.dragAndDrop(src, dest).build().perform();
 		
+//		slider
+		WebElement slider = driver.findElement(By.id("pulse-slider"));
 		
+//		ḥover + move + click
+		act.moveToElement(slider).moveByOffset(100, 0).click().build().perform();
+//		act.clickAndHold(slider).moveByOffset(100, 0).release().build().perform();
+//		act.dragAndDropBy(slider,100,0).build().perform();
+				
+		driver.manage().window().maximize();
 		
 		Thread.sleep(3000);
 		driver.quit();
