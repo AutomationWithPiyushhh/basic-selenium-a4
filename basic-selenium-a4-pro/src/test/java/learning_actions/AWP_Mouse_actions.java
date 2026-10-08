@@ -34,6 +34,7 @@ public class AWP_Mouse_actions {
 		WebElement dest = driver.findElement(By.id("cart-zone"));
 		
 		act.scrollToElement(dest).build().perform();
+		Thread.sleep(5000);
 		act.scrollByAmount(0, 300).build().perform();
 		
 		act.dragAndDrop(src, dest).build().perform();
