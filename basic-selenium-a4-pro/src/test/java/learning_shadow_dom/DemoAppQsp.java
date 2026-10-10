@@ -16,7 +16,7 @@ public class DemoAppQsp {
 		driver.get("https://demoapps.qspiders.com/ui/shadow?sublist=0");
 
 //		step 1> get the shadow root
-		SearchContext shadowHost = driver.findElement(By.xpath("//div[@class='my-3']/preceding-sibling::div")).getShadowRoot();
+		SearchContext shadowHost = driver.findElement(By.xpath("(//div[@class='my-3'])[1]")).getShadowRoot();
 		
 //		Step 2> access the element inside shadow dow using shadowHost
 		shadowHost.findElement(By.cssSelector("[placeholder='Enter your username']")).sendKeys("admin");
