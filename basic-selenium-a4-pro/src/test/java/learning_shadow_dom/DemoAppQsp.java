@@ -19,7 +19,14 @@ public class DemoAppQsp {
 		SearchContext shadowHost = driver.findElement(By.xpath("(//div[@class='my-3'])[1]")).getShadowRoot();
 		
 //		Step 2> access the element inside shadow dow using shadowHost
+//		shadowHost.findElement(By.xpath("//*[@placeholder='Enter your username']")).sendKeys("admin");
+//		shadowHost.findElement(By.tagName("input")).sendKeys("admin");
 		shadowHost.findElement(By.cssSelector("[placeholder='Enter your username']")).sendKeys("admin");
+
+		/* use any locator to find shadow host
+		 * but use only cssSelector inside shadow dom
+		*/		
+		
 		
 		Thread.sleep(3000);
 		driver.quit();
